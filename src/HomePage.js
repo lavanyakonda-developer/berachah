@@ -9,7 +9,7 @@ import bannerImg from "./images/banner.jpeg";
 
 const carouselData = [
   {
-    heading: "WELCOME TO BERACHAH",
+    heading: "WELCOME TO BERACHAH!",
     subHeading: "The place where God dwells",
     text: "The purpose of Berachah Church is to present the Gospel of Jesus Christ.",
     image: bannerImg,
