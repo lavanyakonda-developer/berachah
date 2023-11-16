@@ -219,7 +219,7 @@ const App = () => {
                   style={{ paddingBottom: 16 }}
                 >
                   <a
-                    href="https://api.whatsapp.com/send?phone="
+                    href="https://api.whatsapp.com/send?phone=919100685437"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
