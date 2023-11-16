@@ -56,6 +56,16 @@ const App = () => {
   const [index, setIndex] = useState(0);
   const [activeTab, setActiveTab] = useState("home");
 
+  const [expanded, setExpanded] = useState(false);
+
+  const navToggle = () => {
+    setExpanded(expanded ? false : true);
+  };
+
+  const closeNav = () => {
+    setExpanded(false);
+  };
+
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
@@ -68,6 +78,7 @@ const App = () => {
       );
     }
     setActiveTab(key);
+    closeNav();
   };
 
   useEffect(() => {
@@ -144,20 +155,32 @@ const App = () => {
               data-lg-stick-up="true"
               data-xl-stick-up="true"
               data-xxl-stick-up="true"
-              style={{ height: "98.5px", backgroundColor: "#fff" }}
+              style={{ padding: 0 }}
+              expanded={expanded}
             >
-              <Container style={{ height: "98.5px" }}>
+              <Container style={{ height: "98.5px", backgroundColor: "white" }}>
                 <>
-                  <Navbar.Brand>
+                  <Navbar.Brand
+                    style={{
+                      height: "100%",
+                      justifyContent: "center",
+                      paddingTop: 20,
+                    }}
+                    onClick={closeNav}
+                  >
                     <img src={logo} alt="" width="60" />
                   </Navbar.Brand>
-                  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                  <Navbar.Toggle
+                    aria-controls="basic-navbar-nav"
+                    onClick={navToggle}
+                  />
                 </>
                 <Navbar.Collapse
                   id="basic-navbar-nav"
                   className="nav-bar-collapse-local nav-bar-collapse"
+                  style={{ marginTop: -8 }}
                 >
-                  <Nav className="me-auto nav-links">
+                  <Nav className="me-auto nav-links" data-toggle="collapse">
                     {_.map(tabs, (tab) => {
                       return (
                         <Nav.Link

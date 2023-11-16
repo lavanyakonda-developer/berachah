@@ -19,7 +19,7 @@ const carouselData = [
   {
     heading: "Our services",
     subHeading: "Join our services",
-    text: "In Berachah Church, Children ministry,Youth ministry; Women`s ministry and Men`s ministry are like four pillars of the Church.",
+    text: "In Berachah Church, Children ministry,Youth ministry; Women's ministry and Men's ministry are like four pillars of the Church.",
     image: bannerImg,
     buttonText: "Learn more",
     key: "services",
@@ -400,7 +400,7 @@ const HomePage = (props) => {
               return (
                 <div className="col-12 col-sm-6 col-lg-4 isotope-item">
                   <a>
-                    <img src={pic} alt="" height={256} width={370} />
+                    <img src={pic} alt="" height={256} width={300} />
                   </a>
                 </div>
               );
