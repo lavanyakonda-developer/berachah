@@ -2,9 +2,6 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "react-bootstrap/Carousel";
-import CarouselExampleImg1 from "./images/1.jpeg";
-import CarouselExampleImg2 from "./images/2.jpeg";
-import CarouselExampleImg3 from "./images/3.jpeg";
 import testimonialPH from "./images/testimonials-person-1.jpeg";
 import _ from "lodash";
 import { extractFileIdFromGoogleDriveLink } from "./Utils";
@@ -56,22 +53,22 @@ const testimonials = [
 
 const galleryPics = [
   extractFileIdFromGoogleDriveLink(
-    "https://drive.google.com/file/d/1-kYWmnmLr8tnCAa09e3ENh_NLzH_Pwy_/view?usp=sharing",
+    "https://drive.google.com/file/d/1-kYWmnmLr8tnCAa09e3ENh_NLzH_Pwy_/view?usp=sharing"
   ),
   extractFileIdFromGoogleDriveLink(
-    "https://drive.google.com/file/d/1iwyioZ01sge_V7j6nhp1SuW_k-NjmSzG/view?usp=sharing",
+    "https://drive.google.com/file/d/1iwyioZ01sge_V7j6nhp1SuW_k-NjmSzG/view?usp=sharing"
   ),
   extractFileIdFromGoogleDriveLink(
-    "https://drive.google.com/file/d/1CDQDkd33AHAMw1mXuf-XS1FXZ0Wtcka8/view?usp=sharing",
+    "https://drive.google.com/file/d/1CDQDkd33AHAMw1mXuf-XS1FXZ0Wtcka8/view?usp=sharing"
   ),
   extractFileIdFromGoogleDriveLink(
-    "https://drive.google.com/file/d/129FoTjLrxREzWYzk8Oe_EQCLKMehjTQE/view?usp=sharing",
+    "https://drive.google.com/file/d/129FoTjLrxREzWYzk8Oe_EQCLKMehjTQE/view?usp=sharing"
   ),
   extractFileIdFromGoogleDriveLink(
-    "https://drive.google.com/file/d/1HTb2NWYKFgnk7HVnYjsFc8uMvQfQ-8sR/view?usp=sharing",
+    "https://drive.google.com/file/d/1HTb2NWYKFgnk7HVnYjsFc8uMvQfQ-8sR/view?usp=sharing"
   ),
   extractFileIdFromGoogleDriveLink(
-    "https://drive.google.com/file/d/1J-2F77HX26MYaCaf_t5lp7_BrBsW97vx/view?usp=sharing",
+    "https://drive.google.com/file/d/1J-2F77HX26MYaCaf_t5lp7_BrBsW97vx/view?usp=sharing"
   ),
 ];
 
@@ -371,6 +368,22 @@ const HomePage = (props) => {
               </article>
             </div>
           </div>
+          <div
+            className="button-outer"
+            style={{
+              paddingBottom: 16,
+              display: "flex",
+              justifyContent: "center",
+            }}
+            onClick={() => handleTabChange("services")}
+          >
+            <a
+              className="button button-lg button-primary button-winona"
+              style={{ textDecoration: "none" }}
+            >
+              <div className="content-original">Learn more</div>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -425,7 +438,7 @@ const HomePage = (props) => {
                   >
                     <a
                       className="content-original"
-                      href="https://api.whatsapp.com/send?phone=9100685437"
+                      href="https://api.whatsapp.com/send?phone=919100685437"
                       target="_blank"
                       style={{ textDecoration: "none", color: "white" }}
                     >

@@ -64,7 +64,7 @@ const App = () => {
     if (key === "attend") {
       window.open(
         "https://www.youtube.com/@berachahswaram5627/streams",
-        "_blank",
+        "_blank"
       );
     }
     setActiveTab(key);
@@ -219,7 +219,7 @@ const App = () => {
                   style={{ paddingBottom: 16 }}
                 >
                   <a
-                    href="https://api.whatsapp.com/send?phone=9100685437"
+                    href="https://api.whatsapp.com/send?phone="
                     target="_blank"
                     rel="noopener noreferrer"
                   >

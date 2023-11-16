@@ -38,7 +38,7 @@ const ContactInformation = () => {
         <h4>Reach out to us on social media</h4>
         <div className="social-icons">
           <a
-            href="https://api.whatsapp.com/send?phone=9100685437"
+            href="https://api.whatsapp.com/send?phone=919100685437"
             target="_blank"
             rel="noopener noreferrer"
           >

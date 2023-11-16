@@ -30,7 +30,7 @@ const PrayerRequest = () => {
       await Promise.all([
         axios.post(
           "https://sheet.best/api/sheets/a881b317-0875-4e4b-ab44-802cf3450a4c",
-          formData,
+          formData
         ),
         new Promise((resolve) => setTimeout(resolve, 1000)), // Wait for 1 second
       ]);
@@ -120,7 +120,7 @@ const PrayerRequest = () => {
               <a
                 className="button button-lg button-primary button-winona"
                 style={{ textDecoration: "none" }}
-                href="https://api.whatsapp.com/send?phone=9100685437"
+                href="https://api.whatsapp.com/send?phone=919100685437"
                 target="_blank"
               >
                 <div className="content-original">Chat on Whatsapp</div>
