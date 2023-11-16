@@ -9,42 +9,42 @@ import { extractFileIdFromGoogleDriveLink } from "./Utils";
 const galleryPics = [
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1-kYWmnmLr8tnCAa09e3ENh_NLzH_Pwy_/view?usp=sharing"
+      "https://drive.google.com/file/d/1-kYWmnmLr8tnCAa09e3ENh_NLzH_Pwy_/view?usp=sharing",
     ),
     width: 370,
     height: 256,
   },
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1iwyioZ01sge_V7j6nhp1SuW_k-NjmSzG/view?usp=sharing"
+      "https://drive.google.com/file/d/1iwyioZ01sge_V7j6nhp1SuW_k-NjmSzG/view?usp=sharing",
     ),
     width: 370,
     height: 256,
   },
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1CDQDkd33AHAMw1mXuf-XS1FXZ0Wtcka8/view?usp=sharing"
+      "https://drive.google.com/file/d/1CDQDkd33AHAMw1mXuf-XS1FXZ0Wtcka8/view?usp=sharing",
     ),
     width: 370,
     height: 256,
   },
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/129FoTjLrxREzWYzk8Oe_EQCLKMehjTQE/view?usp=sharing"
+      "https://drive.google.com/file/d/129FoTjLrxREzWYzk8Oe_EQCLKMehjTQE/view?usp=sharing",
     ),
     width: 370,
     height: 464,
   },
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1HTb2NWYKFgnk7HVnYjsFc8uMvQfQ-8sR/view?usp=sharing"
+      "https://drive.google.com/file/d/1HTb2NWYKFgnk7HVnYjsFc8uMvQfQ-8sR/view?usp=sharing",
     ),
     width: 370,
     height: 464,
   },
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1J-2F77HX26MYaCaf_t5lp7_BrBsW97vx/view?usp=sharing"
+      "https://drive.google.com/file/d/1J-2F77HX26MYaCaf_t5lp7_BrBsW97vx/view?usp=sharing",
     ),
     width: 370,
     height: 256,
@@ -52,21 +52,21 @@ const galleryPics = [
 
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1ejhVJF63-FhXQ-bijDfnd_Sj8x2DFV7Y/view?usp=sharing"
+      "https://drive.google.com/file/d/1ejhVJF63-FhXQ-bijDfnd_Sj8x2DFV7Y/view?usp=sharing",
     ),
     width: 370,
     height: 256,
   },
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1J-2F77HX26MYaCaf_t5lp7_BrBsW97vx/view?usp=sharing"
+      "https://drive.google.com/file/d/1J-2F77HX26MYaCaf_t5lp7_BrBsW97vx/view?usp=sharing",
     ),
     width: 370,
     height: 256,
   },
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1ejhVJF63-FhXQ-bijDfnd_Sj8x2DFV7Y/view?usp=sharing"
+      "https://drive.google.com/file/d/1ejhVJF63-FhXQ-bijDfnd_Sj8x2DFV7Y/view?usp=sharing",
     ),
     width: 370,
     height: 256,
@@ -130,7 +130,7 @@ const Gallery = () => {
           onCloseRequest={closeLightbox}
           onMovePrevRequest={() =>
             setPhotoIndex(
-              (photoIndex + galleryPics.length - 1) % galleryPics.length
+              (photoIndex + galleryPics.length - 1) % galleryPics.length,
             )
           }
           onMoveNextRequest={() =>

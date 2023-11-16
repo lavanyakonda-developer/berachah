@@ -1,17 +1,17 @@
-import React from 'react';
-import { extractFileIdFromGoogleDriveLink } from './Utils';
+import React from "react";
+import { extractFileIdFromGoogleDriveLink } from "./Utils";
 
 const About = (props) => {
   return (
-    <div className='column about-container'>
+    <div className="column about-container">
       <h3 style={{ paddingBottom: 8 }}>About us</h3>
-      <div className='row'>
-        <div className='col-md-10 col-lg-8'>
+      <div className="row">
+        <div className="col-md-10 col-lg-8">
           <h6>
             "Greetings in the precious name of our Lord and Saviour Jesus
             Christ, to whom belongs the honor and glory forever and ever"
           </h6>
-          <p style={{ fontSize: 14, padding: '12px 0px' }}>
+          <p style={{ fontSize: 14, padding: "12px 0px" }}>
             Pastor K. Sam Babu, accepted Jesus Christ as his personal saviour
             and was baptized at the age of 16 years in the year 1989. He was
             saved under the ministry of God’s servants and Founders of BERACHAH
@@ -54,15 +54,15 @@ const About = (props) => {
           </p>
         </div>
         <div
-          className='col-md-10 col-lg-4'
-          style={{ display: 'flex', justifyContent: 'center' }}
+          className="col-md-10 col-lg-4"
+          style={{ display: "flex", justifyContent: "center" }}
         >
           <img
             src={extractFileIdFromGoogleDriveLink(
-              'https://drive.google.com/file/d/1L4v3Z1Jz4yClJu1-lthNqc47AlWHHqKW/view?usp=sharing'
+              "https://drive.google.com/file/d/1L4v3Z1Jz4yClJu1-lthNqc47AlWHHqKW/view?usp=sharing",
             )}
-            alt=''
-            style={{ height: 'auto' }}
+            alt=""
+            style={{ height: "auto" }}
           />
         </div>
       </div>
@@ -85,7 +85,7 @@ const About = (props) => {
         primarily based on the following three promises of God: <br />
         <br />
         1. This was the Lord's doing, and it is marvelous in our eyes. - Mark
-        12:11 <br /> 2. He that believeth shall not make haste. - Isaiah 28:16{' '}
+        12:11 <br /> 2. He that believeth shall not make haste. - Isaiah 28:16{" "}
         <br />
         3. Arise, shine; for thy light is come, and the glory of the LORD is
         risen upon thee. And the Gentiles shall come to thy light, and kings to

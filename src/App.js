@@ -64,7 +64,7 @@ const App = () => {
     if (key === "attend") {
       window.open(
         "https://www.youtube.com/@berachahswaram5627/streams",
-        "_blank"
+        "_blank",
       );
     }
     setActiveTab(key);

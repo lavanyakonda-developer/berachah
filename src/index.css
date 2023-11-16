@@ -1,13 +1,13 @@
 body {
   margin: 0;
-  font-family: 'Work Sans' !important;
+  font-family: "Work Sans" !important;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: 'Work Sans' !important;
+  font-family: "Work Sans" !important;
   font-weight: 400;
 }
 
@@ -25,7 +25,7 @@ code {
     margin-top: 10px;
   }
   .box-light-title {
-    font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
+    font-family: "Libre Baskerville", "Times New Roman", Times, serif;
     font-weight: 400;
   }
 }
