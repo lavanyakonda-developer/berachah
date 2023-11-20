@@ -53,6 +53,7 @@ const tabs = [
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const [sermons, setSermons] = useState([]);
   const [index, setIndex] = useState(0);
   const [activeTab, setActiveTab] = useState("home");
   //HACK
@@ -83,10 +84,23 @@ const App = () => {
     closeNav();
   };
 
+  const readSermonsFromGoogleSheets = () => {
+    fetch("https://sheet.best/api/sheets/13dd9454-67e2-4998-a277-d65765cfd58b")
+      .then((response) => response.json())
+      .then((data) => {
+        setSermons(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
+
+    readSermonsFromGoogleSheets();
 
     return () => clearTimeout(timer);
   }, []);
@@ -100,7 +114,7 @@ const App = () => {
       case "gallery":
         return <Gallery setDisplayNone={setDisplayNone} />;
       case "sermons":
-        return <Sermons />;
+        return <Sermons sermons={sermons} />;
       case "request":
         return <PrayerRequest />;
       case "contact":
