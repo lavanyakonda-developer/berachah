@@ -3,29 +3,54 @@ import { Col, Row } from "react-bootstrap";
 import _ from "lodash";
 
 const playlists = [
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
-  "https://www.youtube.com/embed/I9LAoQgYRAg",
+  {
+    link: "https://www.youtube.com/embed/I9LAoQgYRAg",
+    title: "This is the title for the video",
+  },
+  {
+    link: "https://www.youtube.com/embed/I9LAoQgYRAg",
+    title: "This is the title for the video",
+  },
+  {
+    link: "https://www.youtube.com/embed/I9LAoQgYRAg",
+    title: "This is the title for the video",
+  },
+  {
+    link: "https://www.youtube.com/embed/I9LAoQgYRAg",
+    title: "This is the title for the video",
+  },
+  {
+    link: "https://www.youtube.com/embed/I9LAoQgYRAg",
+    title: "This is the title for the video",
+  },
+  {
+    link: "https://www.youtube.com/embed/I9LAoQgYRAg",
+    title: "This is the title for the video",
+  },
+  {
+    link: "https://www.youtube.com/embed/I9LAoQgYRAg",
+    title: "This is the title for the video",
+  },
+  {
+    link: "https://www.youtube.com/embed/I9LAoQgYRAg",
+    title: "This is the title for the video",
+  },
+  {
+    link: "https://www.youtube.com/embed/I9LAoQgYRAg",
+    title: "This is the title for the video",
+  },
+  {
+    link: "https://www.youtube.com/embed/I9LAoQgYRAg",
+    title: "This is the title for the video",
+  },
+  {
+    link: "https://www.youtube.com/embed/I9LAoQgYRAg",
+    title: "This is the title for the video",
+  },
+  {
+    link: "https://www.youtube.com/embed/I9LAoQgYRAg",
+    title: "This is the title for the video",
+  },
 ];
 
 const Sermons = () => {
@@ -39,9 +64,11 @@ const Sermons = () => {
               <iframe
                 width="100%"
                 height="315"
-                src={playlist}
+                src={playlist.link}
                 allowFullScreen
+                title={playlist.title}
               ></iframe>
+              <span>{playlist.title}</span>
             </Col>
           ))}
         </Row>

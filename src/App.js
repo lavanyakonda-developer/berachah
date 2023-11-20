@@ -55,6 +55,8 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const [index, setIndex] = useState(0);
   const [activeTab, setActiveTab] = useState("home");
+  //HACK
+  const [displayNone, setDisplayNone] = useState(false);
 
   const [expanded, setExpanded] = useState(false);
 
@@ -96,7 +98,7 @@ const App = () => {
       case "services":
         return <Services />;
       case "gallery":
-        return <Gallery />;
+        return <Gallery setDisplayNone={setDisplayNone} />;
       case "sermons":
         return <Sermons />;
       case "request":
@@ -135,7 +137,11 @@ const App = () => {
           {/* Navbar */}
           <div
             className="rd-navbar-wrap wrap-nav sticky-top"
-            style={{ height: "99px" }}
+            style={
+              displayNone
+                ? { height: "99px", visibility: "hidden" }
+                : { height: "99px" }
+            }
           >
             <Navbar
               expand="lg"

@@ -1,50 +1,56 @@
 import React, { useState } from "react";
-import { Col, Row, Image } from "react-bootstrap";
+import { Col, Image } from "react-bootstrap";
 import Masonry from "masonry-layout";
 import _ from "lodash";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css"; // Import the styles for the lightbox
 import { extractFileIdFromGoogleDriveLink } from "./Utils";
+import galleryImage from "./images/gallery.jpg";
 
 const galleryPics = [
   {
+    src: galleryImage,
+    width: 370,
+    height: 256,
+  },
+  {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1-kYWmnmLr8tnCAa09e3ENh_NLzH_Pwy_/view?usp=sharing",
+      "https://drive.google.com/file/d/1-kYWmnmLr8tnCAa09e3ENh_NLzH_Pwy_/view?usp=sharing"
     ),
     width: 370,
     height: 256,
   },
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1iwyioZ01sge_V7j6nhp1SuW_k-NjmSzG/view?usp=sharing",
+      "https://drive.google.com/file/d/1iwyioZ01sge_V7j6nhp1SuW_k-NjmSzG/view?usp=sharing"
     ),
     width: 370,
     height: 256,
   },
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1CDQDkd33AHAMw1mXuf-XS1FXZ0Wtcka8/view?usp=sharing",
+      "https://drive.google.com/file/d/1CDQDkd33AHAMw1mXuf-XS1FXZ0Wtcka8/view?usp=sharing"
     ),
     width: 370,
     height: 256,
   },
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/129FoTjLrxREzWYzk8Oe_EQCLKMehjTQE/view?usp=sharing",
+      "https://drive.google.com/file/d/129FoTjLrxREzWYzk8Oe_EQCLKMehjTQE/view?usp=sharing"
     ),
     width: 370,
     height: 464,
   },
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1HTb2NWYKFgnk7HVnYjsFc8uMvQfQ-8sR/view?usp=sharing",
+      "https://drive.google.com/file/d/1HTb2NWYKFgnk7HVnYjsFc8uMvQfQ-8sR/view?usp=sharing"
     ),
     width: 370,
     height: 464,
   },
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1J-2F77HX26MYaCaf_t5lp7_BrBsW97vx/view?usp=sharing",
+      "https://drive.google.com/file/d/1J-2F77HX26MYaCaf_t5lp7_BrBsW97vx/view?usp=sharing"
     ),
     width: 370,
     height: 256,
@@ -52,28 +58,29 @@ const galleryPics = [
 
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1ejhVJF63-FhXQ-bijDfnd_Sj8x2DFV7Y/view?usp=sharing",
+      "https://drive.google.com/file/d/1ejhVJF63-FhXQ-bijDfnd_Sj8x2DFV7Y/view?usp=sharing"
     ),
     width: 370,
     height: 256,
   },
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1J-2F77HX26MYaCaf_t5lp7_BrBsW97vx/view?usp=sharing",
+      "https://drive.google.com/file/d/1J-2F77HX26MYaCaf_t5lp7_BrBsW97vx/view?usp=sharing"
     ),
     width: 370,
     height: 256,
   },
   {
     src: extractFileIdFromGoogleDriveLink(
-      "https://drive.google.com/file/d/1ejhVJF63-FhXQ-bijDfnd_Sj8x2DFV7Y/view?usp=sharing",
+      "https://drive.google.com/file/d/1ejhVJF63-FhXQ-bijDfnd_Sj8x2DFV7Y/view?usp=sharing"
     ),
     width: 370,
     height: 256,
   },
 ];
 
-const Gallery = () => {
+const Gallery = (props) => {
+  const { setDisplayNone } = props;
   const [masonry, setMasonry] = useState(null);
 
   const [photoIndex, setPhotoIndex] = useState(0);
@@ -82,11 +89,13 @@ const Gallery = () => {
   const openLightbox = (index) => {
     setPhotoIndex(index);
     setIsOpen(true);
+    setDisplayNone(true);
   };
 
   const closeLightbox = () => {
     setPhotoIndex(0);
     setIsOpen(false);
+    setDisplayNone(false);
   };
 
   React.useEffect(() => {
@@ -117,7 +126,7 @@ const Gallery = () => {
   return (
     <div className="gallery-container">
       <h3>Our Gallery</h3>
-      <div className="gallery">{_.map(galleryPics, renderImage)}</div>;
+      <div className="gallery">{_.map(galleryPics, renderImage)}</div>
       {isOpen && (
         <Lightbox
           mainSrc={galleryPics[photoIndex].src}
@@ -130,7 +139,7 @@ const Gallery = () => {
           onCloseRequest={closeLightbox}
           onMovePrevRequest={() =>
             setPhotoIndex(
-              (photoIndex + galleryPics.length - 1) % galleryPics.length,
+              (photoIndex + galleryPics.length - 1) % galleryPics.length
             )
           }
           onMoveNextRequest={() =>
