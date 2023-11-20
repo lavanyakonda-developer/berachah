@@ -120,7 +120,7 @@ const PrayerRequest = () => {
               <a
                 className="button button-lg button-primary button-winona"
                 style={{ textDecoration: "none" }}
-                href="https://api.whatsapp.com/send?phone=919100685437"
+                href={`https://api.whatsapp.com/send?phone=919100685437&text=${formData.name} - ${formData.phone} - ${formData.prayerRequest}`}
                 target="_blank"
               >
                 <div className="content-original">Chat on Whatsapp</div>
